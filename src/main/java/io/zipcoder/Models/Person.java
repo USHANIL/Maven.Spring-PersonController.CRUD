@@ -15,12 +15,12 @@ public class Person {
     private String firstname;
     private String lastname;
 
-    @Autowired
+
     Person(){
 
     }
 
-    @Autowired
+
     Person(String firstname, String lastname){
       this.id = null;
       this.firstname = firstname;

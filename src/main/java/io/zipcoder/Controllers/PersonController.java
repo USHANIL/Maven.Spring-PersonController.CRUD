@@ -31,6 +31,11 @@ public class PersonController {
     public ResponseEntity<Iterable<Person>> getPersonList(){
         return new ResponseEntity<>(personRepository.findAll(), HttpStatus.OK);
     }
+    @GetMapping("/test")
+    public String testMe(){
+        return "Works";
+    }
+
     @PutMapping("/people/{id}")
     public ResponseEntity<Person> updatePerson(@PathVariable Long id, @RequestBody Person person){
         Person originalPerson= personRepository.findOne(id); // todo get()
